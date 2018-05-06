@@ -1,0 +1,19 @@
+
+/**
+ * Model class.
+ *
+ * @author <%= personName %>
+ * @version 0.0.1
+ */
+public class <%= project %>Model
+{
+    // Instance variables.
+
+    /**
+     * Constructor for objects of class model
+     */
+    public <%= project %>Model()
+    {
+        // Initialise instance variables
+    }
+}

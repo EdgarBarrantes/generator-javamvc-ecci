@@ -1,0 +1,33 @@
+
+/**
+ * Controller class
+ *
+ * @author <%= personName %>
+ * @version 0.0.1
+ */
+public class <%= project %>Controller
+{
+    // Instances model and view variables.
+    private <%= project %>Model model;
+    private <%= project %>View view;
+
+    /**
+     * Constructor for objects of class controller
+     */
+    public <%= project %>Controller()
+    {
+        // Initialize model and view.
+        model = new <%= project %>Model();
+        view = new <%= project %>View();
+    }
+    
+    public static void main(String args[]) {
+        <%= project %>Controller controller = new <%= project %>Controller();
+        // You can access model and view public methods (or variables),
+        // in the following way. You are free to erase this.
+        // To follow MVC you should limit mostly to call model and view
+        // methods.
+        // controller.model.method();
+        // controller.view.method();
+    }
+}

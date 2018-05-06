@@ -1,0 +1,84 @@
+{
+  "name": "generator-javamvc-ecci",
+  "version": "0.0.1",
+  "description": "This yeoman generator creates the file structure for a valid simple MVC model used in CI-0110 in the Universidad of Costa Rica.",
+  "homepage": "https://github.com/edgarbarrantes/generator-javamvc-ecci#readme",
+  "author": "Edgar Barrantes",
+  "files": [
+    "generators"
+  ],
+  "main": "index.js",
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "devDependencies": {
+    "yeoman-test": "^1.7.0",
+    "yeoman-assert": "^3.1.0",
+    "nsp": "^2.8.0",
+    "eslint": "^4.19.1",
+    "prettier": "^1.11.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^6.1.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-config-xo": "^0.20.1",
+    "jest": "^22.0.6"
+  },
+  "engines": {
+    "npm": ">= 4.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1 && jest",
+    "prepublishOnly": "nsp check",
+    "pretest": "eslint .",
+    "precommit": "lint-staged"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edgarbarrantes/generator-javamvc-ecci.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/edgarbarrantes/generator-javamvc-ecci/issues"
+  },
+  "dependencies": {
+    "yeoman-generator": "^2.0.1",
+    "chalk": "^2.1.0",
+    "yosay": "^2.0.1"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "xo",
+      "prettier"
+    ],
+    "env": {
+      "jest": true,
+      "node": true
+    },
+    "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "singleQuote": true,
+          "printWidth": 90
+        }
+      ]
+    },
+    "plugins": [
+      "prettier"
+    ]
+  }
+}

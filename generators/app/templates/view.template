@@ -1,0 +1,26 @@
+import java.util.Scanner;
+/**
+ * View class.
+ *
+ * @author <%= personName %>
+ * @version 0.0.1
+ */
+public class <%= project %>View
+{
+    // Instance Scanner
+    private Scanner sc;
+
+    /**
+     * Constructor for objects of class view
+     */
+    public <%= project %>View() {
+        sc = new Scanner(System.in);
+    }
+
+    /**
+     * A method to read strings.
+     */
+    public String readString() {
+        return sc.nextLine();
+    }
+}
