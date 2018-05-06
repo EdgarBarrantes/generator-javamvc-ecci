@@ -12,11 +12,11 @@ describe('generator-javamvc-ecci:app', () => {
 
   it('creates files', () => {
     assert.file([
-      'TestingProject/TestingProjectController.java',
-      'TestingProject/TestingProjectModel.java',
-      'TestingProject/TestingProjectView.java',
-      'TestingProject/README.TXT',
-      'TestingProject/package.bluej'
+      'TestingProjectController.java',
+      'TestingProjectModel.java',
+      'TestingProjectView.java',
+      'README.TXT',
+      'package.bluej'
     ]);
   });
 });

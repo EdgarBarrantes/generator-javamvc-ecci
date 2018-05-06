@@ -21,6 +21,6 @@ describe('generator-javamvc-ecci:class', () => {
   });
 
   it('creates files', () => {
-    assert.file(['TestingProject/Class.java']);
+    assert.file(['Class.java']);
   });
 });
