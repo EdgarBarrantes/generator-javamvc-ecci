@@ -28,12 +28,12 @@ module.exports = class extends Generator {
       {
         type: 'input',
         name: 'personName',
-        message: "What's your name?",
-        store: true
+        message: "What's your name?"
       }
     ]).then(props => {
       this.projectName = props.projectName;
       this.personName = props.personName;
+      this.destinationRoot(this.projectName);
     });
   }
 
@@ -52,7 +52,7 @@ module.exports = class extends Generator {
     this.log(this.personName);
     this.fs.copyTpl(
       this.templatePath('controller.template'),
-      this.destinationPath(this.projectName + '/' + this.projectName + 'Controller.java'),
+      this.destinationPath(this.projectName + 'Controller.java'),
       {
         project: this.projectName,
         personName: this.personName
@@ -60,7 +60,7 @@ module.exports = class extends Generator {
     );
     this.fs.copyTpl(
       this.templatePath('model.template'),
-      this.destinationPath(this.projectName + '/' + this.projectName + 'Model.java'),
+      this.destinationPath(this.projectName + 'Model.java'),
       {
         project: this.projectName,
         personName: this.personName
@@ -68,24 +68,20 @@ module.exports = class extends Generator {
     );
     this.fs.copyTpl(
       this.templatePath('view.template'),
-      this.destinationPath(this.projectName + '/' + this.projectName + 'View.java'),
+      this.destinationPath(this.projectName + 'View.java'),
       {
         project: this.projectName,
         personName: this.personName
       }
     );
-    this.fs.copyTpl(
-      this.templatePath('README.TXT'),
-      this.destinationPath(this.projectName + '/README.TXT'),
-      {
-        project: this.projectName,
-        personName: this.personName
-      }
-    );
+    this.fs.copyTpl(this.templatePath('README.TXT'), this.destinationPath('README.TXT'), {
+      project: this.projectName,
+      personName: this.personName
+    });
     if (!this.options.nobluej) {
       this.fs.copyTpl(
         this.templatePath('package.bluej'),
-        this.destinationPath(this.projectName + '/package.bluej'),
+        this.destinationPath('package.bluej'),
         {
           project: this.projectName,
           personName: this.personName
@@ -95,7 +91,6 @@ module.exports = class extends Generator {
   }
 
   end() {
-    this.config.save();
     this.log(
       yosay(
         `Cheers for using this generator! Remember to edit the readme, and actually make the quiz or what ever this is... ${chalk.red(

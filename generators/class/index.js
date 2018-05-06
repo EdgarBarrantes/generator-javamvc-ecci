@@ -36,9 +36,7 @@ module.exports = class extends Generator {
     var personInfo = this.config.get('personInfo');
     this.fs.copyTpl(
       this.templatePath('class.template'),
-      this.destinationPath(
-        personInfo.projectName + '/' + this.options.className + '.java'
-      ),
+      this.destinationPath(this.options.className + '.java'),
       {
         className: this.options.className,
         personName: personInfo.personName,
