@@ -1,6 +1,6 @@
 {
   "name": "generator-javamvc-ecci",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "This yeoman generator creates the file structure for a valid simple MVC model used in CI-0110 in the Universidad of Costa Rica.",
   "homepage": "https://github.com/edgarbarrantes/generator-javamvc-ecci#readme",
   "author": "Edgar Barrantes",
