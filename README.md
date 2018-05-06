@@ -1,5 +1,5 @@
 # generator-javamvc-ecci [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
-> This yeoman generator creates the file structure for a valid simple MVC model used in CI-0110 in the Universidad of Costa Rica.
+> This yeoman generator creates the file structure for a valid simple MVC model in java as used in CI-0110 at the Universidad de Costa Rica.
 
 ## Installation
 
@@ -16,11 +16,17 @@ Then generate your new project:
 yo javamvc-ecci
 ```
 
+For example:
+
+![Example on how to use the main generator.](https://github.com/edgarbarrantes/generator-javamvc-ecci/raw/master/gif/app.gif)
+
 You can also generate new classes, in your application directory run:
 
 ```bash
 yo javamvc-ecci:class ClassName
 ```
+
+![Example on how to use the classes subgenerator.](https://github.com/edgarbarrantes/generator-javamvc-ecci/raw/master/gif/class.gif)
 
 ## Getting To Know Yeoman
 
