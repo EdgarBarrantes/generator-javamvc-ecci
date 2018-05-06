@@ -7,10 +7,16 @@ describe('generator-javamvc-ecci:app', () => {
   beforeAll(() => {
     return helpers
       .run(path.join(__dirname, '../generators/app'))
-      .withPrompts({ someAnswer: true });
+      .withPrompts({ projectName: 'TestingProject', personName: 'Erian' });
   });
 
   it('creates files', () => {
-    assert.file(['dummyfile.txt']);
+    assert.file([
+      'TestingProject/TestingProjectController.java',
+      'TestingProject/TestingProjectModel.java',
+      'TestingProject/TestingProjectView.java',
+      'TestingProject/README.TXT',
+      'TestingProject/package.bluej'
+    ]);
   });
 });

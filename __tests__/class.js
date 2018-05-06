@@ -7,10 +7,20 @@ describe('generator-javamvc-ecci:class', () => {
   beforeAll(() => {
     return helpers
       .run(path.join(__dirname, '../generators/class'))
-      .withPrompts({ someAnswer: true });
+      .withPrompts(() => {
+        var done = this.async();
+        return done({ description: 'This is a description.' });
+      })
+      .withArguments(['Class'])
+      .withLocalConfig({
+        personInfo: {
+          projectName: 'TestingProject',
+          personName: 'Erian'
+        }
+      });
   });
 
   it('creates files', () => {
-    assert.file(['dummyfile.txt']);
+    assert.file(['TestingProject/Class.java']);
   });
 });
